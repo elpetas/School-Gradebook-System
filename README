@@ -1,0 +1,62 @@
+# Grade Management System
+
+This program is a Grade Management System implemented in Java. It interacts with a MySQL database to store and manage information about classes, students, assignments, and grades. The program provides a command-line interface that allows users to create new classes, add students, add assignments, grade assignments, and view grades. The main function of the program establishes a connection to the database and sets up the database schema. The program also provides an option to load sample data into the database. The command loop allows the user to enter commands to interact with the program, and each command is implemented as a separate function. The program uses JDBC (Java Database Connectivity) to interact with the MySQL database, and all database interactions are encapsulated within the program's functions.
+
+## Getting Started
+### Prerequisites
+
+To run this program, you need to have the following installed on your system:
+
+- Java Development Kit (JDK)
+- MySQL
+
+## Installing
+
+- Clone this repository to your local machine.
+- Create a MySQL database with the name "grademanagementsystem".
+- Execute the SQL script "part2Schema.sql" to create the necessary tables.
+- (Optional) Execute the SQL script "testData.sql" to load sample data into the database.
+
+## Running the program
+
+Open a command prompt or terminal window and navigate to the directory where the program is located.
+
+Compile the program by running the following command:
+
+```
+javac GradeManagementSystem.java
+```
+
+Run the program by running the following command:
+
+```
+java GradeManagementSystem
+```
+
+## Usage
+
+The program provides a set of commands that allow users to manage classes, categories, assignments, and grades for students. The commands are listed below:
+
+- new-class <course_number> <term> <section_number> <description>: create a new class.
+- list-classes: list all classes.
+- select-class <course_number> <term> <section_number>: select a class.
+- show-class: show the active class.
+- show-categories: list the categories with their weights.
+- add-category <name> <weight>: add a new category.
+- show-assignments: list the assignments with their point values, grouped by category.
+- add-assignment <name> , <category> , <description> , <points>: add a new assignment.
+- show-students: list the students enrolled in the class.
+- add-student <username> <student_id> <first_name> <last_name>: add a new student and enroll them in the current class.
+- add-student <username>: enroll an existing student in the current class.
+- grade <assignment name> <username> <grade>: grade an assignment for a student.
+- student-grades <username>: list all grades for a student.
+- gradebook: show the gradebook for the current class.
+
+### Built With
+
+Java
+MySQL
+
+# Link to video presentation
+
+https://www.youtube.com/watch?v=wgC8TEH43ms
